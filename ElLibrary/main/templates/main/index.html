@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+    <h1>Главная страница</h1>
+
+
+{% for book in databass %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{book.title}}</h3>
+            <p>{{book.author}}</p>
+            <p>{{book.year}}</p>
+        </div>
+
+    {% endfor %}
+{% endblock %}
